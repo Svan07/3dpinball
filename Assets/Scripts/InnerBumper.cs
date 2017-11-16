@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class InnerBumper : MonoBehaviour {
     public KeyCode kfc ;
+    private Rigidbody rigidBody;
+    [SerializeField]
+
 	// Use this for initialization
 	void Start () {
-		
+        rigidBody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(kfc))
         {
-            GetComponent<Rigidbody>().AddForce(new Vector3(11,0,0));
+            rigidBody.AddForce(new Vector3(11,0,0));
         }
         if (Input.GetKeyUp(kfc))
         {
-            GetComponent<Rigidbody>().AddForce(new Vector3(-2, 0, 0));
+            rigidBody.AddForce(new Vector3(-2, 0, 0));
         }
     }
 
