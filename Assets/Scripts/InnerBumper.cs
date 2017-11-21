@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InnerBumper : MonoBehaviour {
-    public KeyCode kfc ;
-    private Rigidbody rigidBody;
+
     [SerializeField]
+    private KeyCode kfc ;
+
+    private Rigidbody rigidBody;
 
 	// Use this for initialization
 	void Start () {
