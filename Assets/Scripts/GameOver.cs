@@ -23,6 +23,8 @@ public class GameOver : MonoBehaviour {
         {
             boule.transform.position = startPoint.transform.position;
             start = true;
+
+            GlobalVariables.score = 0;
         }
     }
 }
